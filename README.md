@@ -7,7 +7,10 @@ and put the required data
 The code should be inside 
 <form >  this is your form dont put this tag
 <?php
+
 	//The code shoud be here 
+
 	echo Mage::helper('recaptcha')->addReCaptchaBlock();
+
  ?>
 </form> this is your form dont put this tag
