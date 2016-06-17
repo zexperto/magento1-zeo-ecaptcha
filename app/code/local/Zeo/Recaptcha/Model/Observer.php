@@ -24,8 +24,8 @@ class Zeo_Recaptcha_Model_Observer {
 					if (! isset ( $post ['g-recaptcha-response'] ) || ! $this->isCaptchaValid ( $post ['g-recaptcha-response'] )) {
 						$message = Mage::helper('core')->__ ( "The reCAPTCHA wasn't entered correctly. Go back and try it again." );
 						Mage::getSingleton ( 'core/session' )->addError ( $message );
-							$loginUrl = Mage::helper('customer')->getLoginUrl();
-							Mage::app()->getResponse()->setRedirect($loginUrl)->sendResponse(); 
+							$Url = $post ["zeo_grecaptcha"];
+							Mage::app()->getResponse()->setRedirect($Url)->sendResponse(); 
 							exit;
 					}
 				}
