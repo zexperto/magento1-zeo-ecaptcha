@@ -37,7 +37,7 @@ class Zeo_Recaptcha_Helper_Data extends Mage_Core_Helper_Abstract
 			
 			//get reCaptcha lang name
 			$lang = Mage::helper('recaptcha')->getLang();
-			if (strlen($lang) == 0 || !in_array($lang, array('en', 'nl', 'fr', 'de', 'pt', 'ru', 'es', 'tr'))) {
+			if (strlen($lang) == 0) {
 				$lang = 'en';
 			}
 			

@@ -2,7 +2,13 @@
 class Zeo_Recaptcha_Model_Observer {
 	public function prepareLayoutBefore(Varien_Event_Observer $observer) {
 		$_block = $observer->getBlock ();
-		$_block->setText ( '<script src="//www.google.com/recaptcha/api.js?onload=renderReCaptcha&render=explicit"></script>' );
+		//get reCaptcha lang name
+		$lang = Mage::helper('recaptcha')->getLang();
+		if (strlen($lang) == 0) {
+			$lang = 'en';
+		}
+			
+		$_block->setText ( '<script src="//www.google.com/recaptcha/api.js?onload=renderReCaptcha&render=explicit&hl='.$lang.'"></script>' );
 		/*
 		 * $block = $observer->getEvent()->getBlock();
 		 *
