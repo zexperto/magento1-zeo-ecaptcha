@@ -17,7 +17,6 @@
 			<show_in_store>1</show_in_store>            
 			<groups>
 			<general translate="label"> 
-				
                     <label>reCaptcha</label>
                     <frontend_type>text</frontend_type>
                     <sort_order>100</sort_order>
@@ -63,6 +62,15 @@
                             <show_in_website>1</show_in_website>
                             <show_in_store>1</show_in_store>
                         </lang>
+                        <force_actions translate="label">
+                            <label>Force reCaptcha in those actions</label>
+                            <comment>each line should have controller|session type|form session variable, EX: "customer_account_createpost|customer/session|customer_form_data"</comment>
+                            <frontend_type>textarea</frontend_type>
+                            <sort_order>50</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>0</show_in_store>
+                        </force_actions>
                        
                     </fields>
                 </general>		   
